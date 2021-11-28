@@ -22,8 +22,23 @@ const decrement = () => {
 };
 //REDUCER HOW YOUR ACTIONS TRANSFORM THE STATE INTO THE NEXT STATE
 // this is the inital state
-const counter = (state =0;)
+const counter = (state =0, action) => {
+switch(action.type){
+  case "INCREMENT";
+  return state + 1
+  case "DECREMENT";
+  return state -1;
+}
+}
+
+let store = createStore(counter);
+
+//display it in the console.
+
+store.subscribe(() => console.log(store.getState()))
 // diSPATCH HOW IT IS GOING TO DO IT ALL
+// display the one you want
+store.dispatch(increment())
 ReactDOM.render(
   <React.StrictMode>
     <App />
