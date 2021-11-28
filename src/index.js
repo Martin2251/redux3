@@ -14,8 +14,15 @@ const increment = () => {
     type: "INCREMENT",
   };
 };
-//REDUCER HOW YOUR ACTIONS TRANSFORM THE STATE INTO THE NEXT STATE
 
+const decrement = () => {
+  return {
+    type: "DECREMENT",
+  };
+};
+//REDUCER HOW YOUR ACTIONS TRANSFORM THE STATE INTO THE NEXT STATE
+// this is the inital state
+const counter = (state =0;)
 // diSPATCH HOW IT IS GOING TO DO IT ALL
 ReactDOM.render(
   <React.StrictMode>
